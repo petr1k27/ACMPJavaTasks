@@ -5,12 +5,16 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int result = getSum(reader.readLine());
+        long result = sqr(reader.readLine());
         System.out.println(result);
     }
 
-    public static int getSum(String input) {
-        int N = Integer.parseInt(input);
-        return (N > 0 ? ((1 + N) * N) / 2 : N < 0 ? -(((1 + Math.abs(N)) * Math.abs(N) / 2) - 1) : 1);
+    public static long sqr(String number) {
+        if (number.length()== 1 || number.equals("5")) {
+            return 25;
+        } else {
+            int subNumber = Integer.parseInt(number.substring(0, number.length() - 1));
+            return Long.parseLong(subNumber * (subNumber + 1) + "25");
+        }
     }
 }
