@@ -10,7 +10,7 @@ public class Main {
     }
 
     public static int getSum(String input) {
-        String[] numbers = input.split(" ");
-        return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+        int N = Integer.parseInt(input);
+        return (N > 0 ? ((1 + N) * N) / 2 : N < 0 ? -(((1 + Math.abs(N)) * Math.abs(N) / 2) - 1) : 1);
     }
 }
