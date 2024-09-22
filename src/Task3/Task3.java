@@ -21,7 +21,7 @@ package Task3;
 
 public class Task3 {
     public long sqr(String number) {
-        if (number.length()== 1 || number.equals("5")) {
+        if (number.equals("5")) {
             return 25;
         } else {
             int subNumber = Integer.parseInt(number.substring(0, number.length() - 1));
